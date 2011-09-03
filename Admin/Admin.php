@@ -1657,7 +1657,7 @@ abstract class Admin implements AdminInterface, DomainObjectInterface
 
         $child = $menu->addChild(
             $this->trans(sprintf('breadcrumb.link_%s_list', $this->getClassnameLabel())),
-            array( 'uri' => $this->generateUrl('list') )
+            array('uri' => $this->generateUrl('list'))
         );
 
         $childAdmin = $this->getCurrentChildAdmin();
@@ -1667,7 +1667,7 @@ abstract class Admin implements AdminInterface, DomainObjectInterface
 
             $child = $child->addChild(
                 (string) $this->getSubject(),
-                array( 'uri' => $this->generateUrl('edit', array('id' => $id)) )
+                array('uri' => $this->generateUrl('edit', array('id' => $id)))
             );
 
             return $childAdmin->buildBreadcrumbs($action, $child);
@@ -1675,7 +1675,7 @@ abstract class Admin implements AdminInterface, DomainObjectInterface
             if ($action != 'list') {
                 $menu = $menu->addChild(
                     $this->trans(sprintf('breadcrumb.link_%s_list', $this->getClassnameLabel())),
-                    array( 'uri' => $this->generateUrl('list') )
+                    array('uri' => $this->generateUrl('list'))
                 );
             }
 
